@@ -70,6 +70,34 @@ plugins:
   # Note: the /introduction -> home redirect (which GitBook did) is handled by the
   # static docs/introduction.html meta-refresh file, not a plugin, to avoid pulling
   # in mkdocs-redirects (which auto-installs the unrelated `properdocs` package).
+  # LLM-friendliness (see also docs/robots.txt): emits a curated /llms.txt index
+  # (llmstxt.org) and a /llms-full.txt with every page's cleaned Markdown
+  # concatenated, both built from the sections below.
+  # Sections use globs so new pages in an existing section are picked up
+  # automatically; only a brand-new top-level section needs adding here.
+  - llmstxt:
+      full_output: llms-full.txt
+      markdown_description: >-
+        A practical notebook supplementing the official Shopware 6 documentation
+        with real-world insights on setup, hosting, deployment, development and
+        migration, by Benny Poensgen.
+      sections:
+        Introduction:
+          - index.md
+          - introduction/*.md
+        ddev for Shopware:
+          - ddev-for-shopware/*.md
+        Hosting:
+          - hosting/*.md
+        Deployment:
+          - deployment/*.md
+        Development:
+          - development/*.md
+        Reference:
+          - administration.md
+          - database.md
+        Migration:
+          - migration/*.md
 
 nav:
   - Introduction: index.md

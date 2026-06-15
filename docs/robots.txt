@@ -1,0 +1,60 @@
+# notebook.vanwittlaer.de — robots policy
+#
+# A practical Shopware 6 notebook by Benny Poensgen. This content exists to be
+# found, read, cited and learned from, so AI/LLM crawlers are explicitly welcome
+# — both search/answer bots and training crawlers.
+#
+# For a machine-friendly map of the site see the llmstxt.org files (not a
+# robots.txt standard directive, listed here as a discoverable pointer):
+#   https://notebook.vanwittlaer.de/llms.txt        (curated index)
+#   https://notebook.vanwittlaer.de/llms-full.txt   (full content, one file)
+
+# Everyone, including any crawler not named below.
+User-agent: *
+Allow: /
+
+# OpenAI
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+
+# Google (Gemini / Vertex training corpus)
+User-agent: Google-Extended
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# Common Crawl (feeds many open models)
+User-agent: CCBot
+Allow: /
+
+# Other major AI crawlers
+User-agent: Amazonbot
+Allow: /
+User-agent: Bytespider
+Allow: /
+User-agent: Meta-ExternalAgent
+Allow: /
+User-agent: cohere-ai
+Allow: /
+
+Sitemap: https://notebook.vanwittlaer.de/sitemap.xml
