@@ -58,10 +58,9 @@ markdown_extensions:
 
 plugins:
   - search
-  - redirects:
-      redirect_maps:
-        # GitBook served the intro at the root and redirected /introduction -> /.
-        introduction.md: index.md
+  # Note: the /introduction -> home redirect (which GitBook did) is handled by the
+  # static docs/introduction.html meta-refresh file, not a plugin, to avoid pulling
+  # in mkdocs-redirects (which auto-installs the unrelated `properdocs` package).
 
 nav:
   - Introduction: index.md
