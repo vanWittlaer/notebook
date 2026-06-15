@@ -15,6 +15,9 @@ use_directory_urls: true
 theme:
   name: material
   language: en
+  # Theme overrides live in overrides/ (currently: GoatCounter analytics in
+  # main.html). Material's `custom_dir` is layered on top of the built-in theme.
+  custom_dir: overrides
   features:
     - navigation.instant      # SPA-like fast page loads
     - navigation.tracking      # update URL with the active anchor
