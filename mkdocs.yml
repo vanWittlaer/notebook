@@ -51,7 +51,13 @@ markdown_extensions:
       anchor_linenums: true
   - pymdownx.superfences
   - pymdownx.inlinehilite
-  - pymdownx.snippets
+  - pymdownx.snippets:
+      # Allow `--8<--` includes to fetch remote URLs. The install.sh gist is the
+      # single source of truth; the install page pulls it at build time so the
+      # embedded script can never drift from the gist. Trade-off: the build now
+      # needs network access — `mkdocs build --strict` in CI fails if the gist
+      # is unreachable.
+      url_download: true
   - pymdownx.details
   - pymdownx.tabbed:
       alternate_style: true

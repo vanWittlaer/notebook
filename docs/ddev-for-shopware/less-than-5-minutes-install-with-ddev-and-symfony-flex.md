@@ -10,7 +10,13 @@ Not to mention the benefits of ddev’s ease of use and flexibility.
 
 The first thing to do is create a project folder, let’s call it my-project, and cd into it. The name of this folder will be the project name used with ddev.
 
-The easiest and quickest way for the install is to copy my installation script [install.sh](https://gist.github.com/vanWittlaer/def64280969ff3e8d2934ac03b206828) file from Github into your project folder. Then run the following command:
+The easiest and quickest way for the install is to copy my installation script [install.sh](https://gist.github.com/vanWittlaer/def64280969ff3e8d2934ac03b206828) file from Github into your project folder. Its contents are:
+
+```bash title="install.sh"
+--8<-- "https://gist.githubusercontent.com/vanWittlaer/def64280969ff3e8d2934ac03b206828/raw/install.sh"
+```
+
+Then run the following command:
 
 ```
 chmod +x install.sh && ./install.sh
@@ -27,8 +33,6 @@ When the installation script is finished, you will have
 
 ### The Script Explained
 
-[https://gist.github.com/vanWittlaer/def64280969ff3e8d2934ac03b206828](https://gist.github.com/vanWittlaer/def64280969ff3e8d2934ac03b206828)
-
 The first command – `ddev config` – creates a configuration file for your ddev project with these settings:
 
 * `--project-type=shopware6` – this tells ddev to setup a Shopware 6 type project. ddev will create a `.env.local` file within the project's `shopware` folder with all relevant settings
@@ -36,10 +40,6 @@ The first command – `ddev config` – creates a configuration file for your dd
 * `--web-environment="APP_ENV=dev"` - read all environment variables from `.env.dev`
 * `--web-working-dir=/var/www/html/shopware` – this defines the working dir for the web service
 * `--composer-root` - if you want to use the ddev composer command, this tells ddev where to find your composer.json file
-* `--database=mysql:8.4` – for a very long time mySQL has been the default with Shopware 6, however MariaDB will do as well. In any event, chose your local database to match your server installation.
-* `--php-version=8.3` – you may want to adjust the php version to your needs
-* `--nodejs-version=22` – you may want to adjust the nodejs version to your needs. 22 is the current LTS of node.js and supported by Shopware 6.6.9 and above. Downgrade it to 18 if your are still on Shopware 6.5.x
-* `--webserver-type=apache-fpm` – again, as with the database flavour, best to chose apache or nginx to match your server setup
 
 The next command – `ddev start` – starts your project containers.
 

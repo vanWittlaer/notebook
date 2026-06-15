@@ -12,6 +12,6 @@ Something not working as described? Further questions or comments? [Let's get in
 
 **Editor**
 
-Benny Poensgen\
-Manteuffelstr. 5, 65197 Wiesbaden\
+Benny Poensgen  
+Manteuffelstr. 5, 65197 Wiesbaden  
 E-Mail: <poensgen@vanwittlaer.de>
