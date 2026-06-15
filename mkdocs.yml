@@ -1,0 +1,113 @@
+site_name: Benny's Shopware Notebook
+site_url: https://notebook.vanwittlaer.de/
+site_description: >-
+  A practical notebook supplementing the official Shopware 6 documentation with
+  real-world insights on setup, hosting, deployment, development and migration.
+site_author: Benny Poensgen
+copyright: © Benny Poensgen
+
+# Emit flat .html files (no per-page directories) so the public URLs match
+# GitBook's exactly: extensionless and WITHOUT a trailing slash. GitHub Pages
+# serves `hosting/rabbitmq.html` for a request to `/hosting/rabbitmq`, so every
+# existing inbound link keeps resolving to the same path.
+use_directory_urls: false
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.instant      # SPA-like fast page loads
+    - navigation.tracking      # update URL with the active anchor
+    - navigation.sections      # render top-level groups as sidebar sections
+    - navigation.indexes       # section landing pages (the index.md per folder)
+    - navigation.top           # back-to-top button
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy        # copy button on code blocks
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search
+  - redirects:
+      redirect_maps:
+        # GitBook served the intro at the root and redirected /introduction -> /.
+        introduction.md: index.md
+
+nav:
+  - Introduction: index.md
+  - How to Get in Touch: introduction/how-to-get-in-touch.md
+  - ddev for Shopware:
+      - ddev-for-shopware/index.md
+      - Less than 5 Minutes Install with ddev and Symfony Flex: ddev-for-shopware/less-than-5-minutes-install-with-ddev-and-symfony-flex.md
+      - Using shopware-cli with ddev: ddev-for-shopware/using-shopware-cli-with-ddev.md
+      - Storefront and Admin Watchers with ddev: ddev-for-shopware/storefront-and-admin-watchers-with-ddev.md
+      - Message Queue Setup with ddev: ddev-for-shopware/message-queue-setup-with-ddev.md
+      - Contribute with ddev: ddev-for-shopware/contribute-with-ddev.md
+      - Performance Tweaks: ddev-for-shopware/performance-tweaks.md
+      - RabbitMQ with ddev: ddev-for-shopware/rabbitmq-with-ddev.md
+      - phpstan pro with ddev: ddev-for-shopware/phpstan-pro-with-ddev.md
+      - Fetch Media from Production or Staging Server: ddev-for-shopware/fetch-media-from-production-or-staging-server.md
+      - Running Claude Code in ddev: ddev-for-shopware/running-claude-code-in-ddev.md
+      - Frontend Work with Claude Code and Playwright: ddev-for-shopware/frontend-work-with-claude-code-and-playwright.md
+  - Hosting:
+      - hosting/index.md
+      - How to Trouble-shoot and Evaluate Environment Variables: hosting/how-to-trouble-shoot-and-evaluate-environment-variables.md
+      - Media URLs Out Of Sync between Servers: hosting/media-urls-out-of-sync-between-servers.md
+      - RabbitMQ: hosting/rabbitmq.md
+      - SFTP-Users: hosting/sftp-users.md
+      - Basic-Auth for Shopware 6 with nginx: hosting/basic-auth-for-shopware-6-with-nginx.md
+      - How to Avoid Failed Systemd Units: hosting/how-to-avoid-failed-systemd-units.md
+      - JWT-Secrets as Environment Variables: hosting/jwt-secrets-as-environment-variables.md
+      - How to generate INSTANCE_ID and APP_SECRET: hosting/how-to-generate-instance_id-and-app_secret.md
+      - PaaS with Coolify: hosting/paas-with-coolify.md
+  - Deployment:
+      - deployment/index.md
+      - Close-to-Zero Downtime Deployment: deployment/close-to-zero-downtime-deployment.md
+      - PHP Cache Related Issues: deployment/php-cache-related-issues.md
+  - Development:
+      - development/index.md
+      - Patching the Core: development/patching-the-core.md
+      - How to Discover Available Updates?: development/how-to-discover-available-updates.md
+      - Local Testing of Shopware Commercial Features: development/local-testing-of-shopware-commercial-features.md
+      - Claude Code: development/claude-code.md
+  - Administration: administration.md
+  - Database: database.md
+  - Migration:
+      - migration/index.md
+      - Side Effects: migration/side-effects.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/vanWittlaer

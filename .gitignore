@@ -1,0 +1,13 @@
+# MkDocs build output
+/site/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# One-shot import helpers (kept out of the repo; see README)
+.scaffold-*.py
+
+# IDE
+.idea/
