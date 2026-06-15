@@ -39,18 +39,20 @@ with `mkdocs build --strict` and publishes it to GitHub Pages.
 
 ## URL preservation
 
-The path structure matches the old GitBook site exactly. With
-`use_directory_urls: false`, MkDocs builds flat files like
-`hosting/rabbitmq.html`, and GitHub Pages serves them at the **extensionless,
-no-trailing-slash** URL `/hosting/rabbitmq` — identical to the old GitBook URLs,
-so every inbound link and bookmark keeps resolving to the same address.
-`/introduction` redirects to the home page, matching GitBook's old behaviour.
+The path structure matches the old GitBook site. With the default
+`use_directory_urls: true`, pages build to `hosting/rabbitmq/index.html` and are
+served at the clean, extension-less path `/hosting/rabbitmq/`. In-site links
+carry no `.html` suffix, and the old no-trailing-slash GitBook URLs
+(`/hosting/rabbitmq`) are **301-redirected** by GitHub Pages to the trailing-slash
+form — so every inbound link and bookmark keeps working, and the 301 is the
+correct SEO signal for the move. `/introduction` redirects to the home page,
+matching GitBook's old behaviour.
 
-Trade-off: because of `use_directory_urls: false`, the links MkDocs writes
-*within* the site carry a `.html` suffix (e.g. clicking a nav item lands on
-`/hosting/rabbitmq.html`). Both forms serve the same page. To instead get clean
-trailing-slash URLs (`/hosting/rabbitmq/`) at the cost of a redirect on old
-no-slash links, set `use_directory_urls: true`.
+(Setting `use_directory_urls: false` would instead emit flat `*.html` files and
+serve byte-identical extension-less URLs with no trailing slash, but then the
+site's own navigation links would carry a visible `.html` suffix — and the
+canonical tags would point at the `.html` form anyway. Trailing-slash is the
+cleaner, conventional choice.)
 
 ## Migration note
 

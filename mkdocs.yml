@@ -6,11 +6,11 @@ site_description: >-
 site_author: Benny Poensgen
 copyright: © Benny Poensgen
 
-# Emit flat .html files (no per-page directories) so the public URLs match
-# GitBook's exactly: extensionless and WITHOUT a trailing slash. GitHub Pages
-# serves `hosting/rabbitmq.html` for a request to `/hosting/rabbitmq`, so every
-# existing inbound link keeps resolving to the same path.
-use_directory_urls: false
+# Default directory-style URLs: each page builds to `<name>/index.html` and is
+# served at a clean, extension-less path WITH a trailing slash (e.g.
+# `/hosting/rabbitmq/`). In-site links stay clean (no `.html`), and the old
+# no-trailing-slash GitBook URLs are 301-redirected to this form by GitHub Pages.
+use_directory_urls: true
 
 theme:
   name: material
