@@ -18,7 +18,6 @@ theme:
   features:
     - navigation.instant      # SPA-like fast page loads
     - navigation.tracking      # update URL with the active anchor
-    - navigation.sections      # render top-level groups as sidebar sections
     - navigation.indexes       # section landing pages (the index.md per folder)
     - navigation.top           # back-to-top button
     - toc.follow
