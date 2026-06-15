@@ -7,6 +7,18 @@ migrated off GitBook.
 
 ## Local preview
 
+Two one-command wrappers, both serving live-reload preview at
+<http://127.0.0.1:8000> (Ctrl-C to stop):
+
+```bash
+./serve.sh          # Docker only, no local Python (pinned Material image)
+./serve-native.sh   # local Python venv; use if Docker's bind-mount live-reload
+                    # doesn't fire (inotify/VirtioFS gap on OrbStack/Docker Desktop)
+```
+
+`serve-native.sh` creates `.venv/` and installs `requirements.txt` on first run.
+The equivalent manual steps:
+
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
