@@ -104,6 +104,7 @@ nav:
   - How to Get in Touch: introduction/how-to-get-in-touch.md
   - ddev for Shopware:
       - ddev-for-shopware/index.md
+      - Why use ddev for Shopware?: ddev-for-shopware/why-use-ddev.md
       - Less than 5 Minutes Install with ddev and Symfony Flex: ddev-for-shopware/less-than-5-minutes-install-with-ddev-and-symfony-flex.md
       - Using shopware-cli with ddev: ddev-for-shopware/using-shopware-cli-with-ddev.md
       - Storefront and Admin Watchers with ddev: ddev-for-shopware/storefront-and-admin-watchers-with-ddev.md

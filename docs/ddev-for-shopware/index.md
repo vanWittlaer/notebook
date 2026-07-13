@@ -1,5 +1,6 @@
 # ddev for Shopware
 
+- [Why use ddev for Shopware?](why-use-ddev.md):  Recently, ddev has been growing in popularity amongst both Shopware developers and Shopware agencies. Here’s my theory as to why that is.
 - [Less than 5 Minutes Install with ddev and Symfony Flex](less-than-5-minutes-install-with-ddev-and-symfony-flex.md): This page describes how to install Shopware in a local ddev environment, using Shopware's Symfony Flex template.
 - [Using shopware-cli with ddev](using-shopware-cli-with-ddev.md): This page explains how to use shopware-cli with ddev. shopware-cli replaces some of Shopware's commands (like bin/storefront-build.sh), and adds a set of useful commands.
 - [Storefront and Admin Watchers with ddev](storefront-and-admin-watchers-with-ddev.md): This page explains how to set up and use Shopware's storefront and admin watchers.
