@@ -1,5 +1,7 @@
 # RabbitMQ
 
+**Note:** The below instructions are pretty much outdated - use [Coolify-based server setups](paas-with-coolify.md) instead.
+
 ### Get and Setup RabbitMQ
 
 I recommend running RabbitMQ on a dedicated server. For three reasons:
