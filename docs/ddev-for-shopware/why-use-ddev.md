@@ -20,6 +20,11 @@ It helps to look at this from two perspectives: the individual developer/freelan
   built in.
 - **Project isolation** — Freelancers often juggle several client projects at once. With ddev, each project runs
   in its own fully isolated environment by default — no fiddly trial-and-error with port numbers.
+- **Trusted HTTPS** ddev uses traefik and mkcert to conduct all your artifacts with locally trusted HTTPS.
+- **Cross-project connectivity** Projects can communicate with each other via the ddev provided local URLs. 
+A crucial feature e.g. for development of Shopware apps, when you want to test your server with a local Shopware client.
+- **xdebug out-of-the-box** With phpstorm, using xdebug is just one command `ddev xdebug on` away. (With VSCode some setup,
+approx. 2 min., is required.)
 
 ## Agencies' benefits
 
@@ -36,3 +41,6 @@ It helps to look at this from two perspectives: the individual developer/freelan
   project, but ready to reproduce a complex production stack locally when you need to. Extra services such as
   Redis, [RabbitMQ](rabbitmq-with-ddev.md), Elasticsearch/OpenSearch and more are a few lines of config or a
   ready-made add-on away, so your local environment matches production instead of merely approximating it.
+
+Also read Randy's (lead maintainer of ddev) 
+[blog article on opensource.com](https://opensource.com/article/22/12/ddev){:target="_blank"}.
