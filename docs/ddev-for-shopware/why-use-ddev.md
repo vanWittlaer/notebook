@@ -41,6 +41,9 @@ approx. 2 min., is required.)
   project, but ready to reproduce a complex production stack locally when you need to. Extra services such as
   Redis, [RabbitMQ](rabbitmq-with-ddev.md), Elasticsearch/OpenSearch and more are a few lines of config or a
   ready-made add-on away, so your local environment matches production instead of merely approximating it.
+- **Instant client demos** With a single command `ddev share` projects can be accessed across the web using a 
+tunnel provider like ngrok or cloudflared. Teams can thus easily share their achievements with clients on-the-fly, 
+without running deployments and demo server setups.
 
 Also read Randy's (lead maintainer of ddev) 
 [blog article on opensource.com](https://opensource.com/article/22/12/ddev){:target="_blank"}.
