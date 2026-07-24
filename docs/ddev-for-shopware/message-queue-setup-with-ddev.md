@@ -1,6 +1,6 @@
-# Message Queue Setup with ddev
+# Setting up workers and the scheduler as automated tasks
 
-At some point it might be desired to mirror your local development or your demo environment as closely as possible to the production environment. When it comes to Symfony's or Shopware's message queue, this can be achieved easily with ddev.
+At some point it might be desired to mirror your local development or your demo environment as closely as possible to the production environment. When it comes to running Symfony's or Shopware's message queue workers and the scheduler as automated background tasks, this can be achieved easily with ddev.
 
 ### Supervisor
 
@@ -53,16 +53,16 @@ For an explanation of the message queue worker configuration in general, head ov
 
 Should you need or want more than one instance of a particular worker, just adjust the `numproc` directive.
 
-### Create a Persistent Worker Command
+### Create a Self-Restarting Worker Command
 
 Note that the `command` directive in the above file does not call the bin/console commands directly. Instead, a self-written shell script `run-worker.sh` is executed. The reason for this is
 
-supervisord with ddev cannot handle processes that kill themselves, such as the `messenger:consume` and `scheduled-task:run` commands when you use the `--time-limit` or `--message-limit` parameters. We need persistent commands for our supervisors. The solution is a custom script in your project's bin folder `shopware/bin`:
+supervisord with ddev cannot handle processes that kill themselves, such as the `messenger:consume` and `scheduled-task:run` commands when you use the `--time-limit` or `--message-limit` parameters. We need long-running commands for our supervisors, which restart the underlying worker whenever it exits. The solution is a custom script in your project's bin folder `shopware/bin`:
 
 ```bash
 #!/usr/bin/env bash
 # shopware/bin/run-worker.sh
-# The purpose of this bash script is to provide a persistent command for ddev's supervisord implementation,
+# The purpose of this bash script is to provide a long-running, self-restarting command for ddev's supervisord implementation,
 # while allowing to call Symfony's/Shopware's worker commands in a non-persistent mode
 while :; do
   /usr/bin/php /var/www/html/shopware/bin/console $1 -n
