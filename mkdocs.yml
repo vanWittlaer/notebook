@@ -133,6 +133,7 @@ nav:
       - PHP Cache Related Issues: deployment/php-cache-related-issues.md
   - Development:
       - development/index.md
+      - Install the Shopware Conflicts Package: development/install-shopware-conflicts.md
       - Patching the Core: development/patching-the-core.md
       - How to Discover Available Updates?: development/how-to-discover-available-updates.md
       - Local Testing of Shopware Commercial Features: development/local-testing-of-shopware-commercial-features.md
