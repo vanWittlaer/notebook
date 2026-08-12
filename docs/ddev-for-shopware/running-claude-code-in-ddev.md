@@ -2,8 +2,14 @@
 
 ### Why?
 
-1. Running Claude natively on your machine potentially gives it access to everything what's on your machine. If you run Claude just from within your ddev container, it is, by nature, restricted to what is available from within it.
-2. Provide the same version of Claude to all project team mates without the need for individual installs.
+1. Running Claude natively on your machine potentially gives it access to everything on it. Run Claude from inside your ddev container instead, and it is restricted, by nature, to whatever that container can reach.
+2. Everyone on the project gets the same version of Claude, with no individual installs to maintain.
+
+Why not just use the Docker sandbox? It would give you even stronger isolation, thanks to its
+built-in firewall. The sandbox, however, cannot run host commands, so Claude won't be able to run
+`ddev` commands for you — which is often exactly what you want it to do for analysis and testing.
+For the same reason, it cannot drive Playwright to evaluate and test the frontend, something Claude
+Code does easily from inside the ddev container.
 
 ### The ddev-claude-code add-on
 
@@ -27,7 +33,7 @@ Please note that there are several other ddev extensions available to enable Cla
 
 #### Committing and Signing
 
-To allow Claude Code to commit to the project repo, you need to add a file `config.git-signing.local.yaml` to your `.ddev` folder. Also, run `ddev auth ssh` to forward your local private key to the container. Both is documented in the add-on's [readme](https://github.com/vanWittlaer/ddev-claude-code/blob/main/README.md).
+To allow Claude Code to commit to the project repo, you need to add a file `config.git-signing.local.yaml` to your `.ddev` folder. Also, run `ddev auth ssh` to forward your local private key to the container. Both are documented in the add-on's [readme](https://github.com/vanWittlaer/ddev-claude-code/blob/main/README.md).
 
 #### Using PhpStorm's Claude Code Plugin
 
