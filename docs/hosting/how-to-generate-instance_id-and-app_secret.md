@@ -11,3 +11,5 @@ APP\_SECRET - there is a command provided by Shopware
 ```bash
 bin/console system:generate-app-secret
 ```
+
+Run this in any Shopware project, like your local development environment and copy/paste the output.
