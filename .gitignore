@@ -11,3 +11,6 @@ __pycache__/
 
 # IDE
 .idea/
+
+# Third-party reference material — never commit (copyright)
+*.rtf
