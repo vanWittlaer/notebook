@@ -8,7 +8,7 @@ CI/CD Deployment happens in a number of steps, which are spread across a runner 
 
 ### Repository Folder Structure
 
-This is straight-forward, setting up ddev and Shopware will create the two folders `.ddev` and `shopware` for you. I have added a third folder `.deploy`, which holds all stuff needed for the deployment, and has a subfolder for each environment (ddev, stage, production, ...).
+This is straight-forward, setting up DDEV and Shopware will create the two folders `.ddev` and `shopware` for you. I have added a third folder `.deploy`, which holds all stuff needed for the deployment, and has a subfolder for each environment (DDEV, stage, production, ...).
 
 ```
 <my-project>
@@ -19,7 +19,7 @@ This is straight-forward, setting up ddev and Shopware will create the two folde
 └── .gitlab-ci.yml
 ```
 
-ddev and Shopware bring their own .gitignore files. I recommend not to touch these files. If you need to add your custom rules to .gitignore, add a .gitignore file on the project level. Below is an example. As you see, I have added an ignore rule for the .htaccess file in Shopware's public folder, as this file may contain some environment specific directives (like htpasswd protection for the stage environment). The deployment script needs to take care to set up the public/.htaccess file based on the Shopware provided public/.htaccess.dist file.
+DDEV and Shopware bring their own .gitignore files. I recommend not to touch these files. If you need to add your custom rules to .gitignore, add a .gitignore file on the project level. Below is an example. As you see, I have added an ignore rule for the .htaccess file in Shopware's public folder, as this file may contain some environment specific directives (like htpasswd protection for the stage environment). The deployment script needs to take care to set up the public/.htaccess file based on the Shopware provided public/.htaccess.dist file.
 
 ```
 # .gitignore

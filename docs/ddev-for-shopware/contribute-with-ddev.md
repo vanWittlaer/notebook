@@ -1,8 +1,8 @@
-# Contribute with ddev
+# Contribute with DDEV
 
-While [Shopware 6](https://github.com/shopware/shopware) comes with a predefined Docker setup file, there is a good reason to use ddev for your local contribution environment: It can be booted in parallel with other ddev projects. In fact, I often have one or more client projects up and running at the same time as a contribution environment.
+While [Shopware 6](https://github.com/shopware/shopware) comes with a predefined Docker setup file, there is a good reason to use DDEV for your local contribution environment: It can be booted in parallel with other DDEV projects. In fact, I often have one or more client projects up and running at the same time as a contribution environment.
 
-Within your contribution project folder, initiate ddev with the following command:
+Within your contribution project folder, initiate DDEV with the following command:
 
 ```
 ddev config --project-type=shopware6 --docroot=shopware/public --composer-root=shopware --web-working-dir=/var/www/html/shopware \
@@ -12,7 +12,7 @@ ddev config --project-type=shopware6 --docroot=shopware/public --composer-root=s
 
 Adjust the php and nodejs versions to the current requirements.
 
-Start ddev and ssh into the web container:
+Start DDEV and ssh into the web container:
 
 ```
 ddev start

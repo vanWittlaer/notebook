@@ -1,6 +1,6 @@
-# Storefront and Admin Watchers with ddev
+# Storefront and Admin Watchers with DDEV
 
-I have successfully tested the admin and storefront watchers with ddev in apache-fpm and nginx-fpm mode up to Shopware versions 6.6.7.1, 6.6.10.4 and 6.7.4.2 to 6.7.7.1. Please note that the Storefront Watcher is not compatible with ddev in Shopware versions 6.6.8.0 to 6.6.8.2.
+I have successfully tested the admin and storefront watchers with DDEV in apache-fpm and nginx-fpm mode up to Shopware versions 6.6.7.1, 6.6.10.4 and 6.7.4.2 to 6.7.7.1. Please note that the Storefront Watcher is not compatible with DDEV in Shopware versions 6.6.8.0 to 6.6.8.2.
 
 Please also note that Shopware's watcher implementations, as of version 6.7.4.2, still seem somewhat immature to me, so exercise caution when following the instructions provided here. I have not verified the use of watchers with versions 6.7.1 to 6.7.3. **I strongly recommend using the watchers provided with Shopware CLI** (I haven't tested the ones provided by Shopware with 6.7.4.2 or later).
 
@@ -32,7 +32,7 @@ web_extra_exposed_ports:
 
 #### Admin Watcher
 
-The current version of the Shopware admin watcher is practically unusable with ddev because it dynamically adds a port for each of your plugins. To avoid this problem, use the standalone Admin Watcher provided with Shopware CLI (see here for details). Start the standalone watcher with this command:
+The current version of the Shopware admin watcher is practically unusable with DDEV because it dynamically adds a port for each of your plugins. To avoid this problem, use the standalone Admin Watcher provided with Shopware CLI (see here for details). Start the standalone watcher with this command:
 
 ```bash
 shopware-cli extension admin-watch custom/static-plugins/<your-plugin>/ \
@@ -41,7 +41,7 @@ https://<project>.ddev.site \
 --external-url https://<project>.ddev.site:5173
 ```
 
-Or you may want to add a custom ddev command for this. To do so, add a file `.ddev/commands/web/admin-watch` with this contents:
+Or you may want to add a custom DDEV command for this. To do so, add a file `.ddev/commands/web/admin-watch` with this contents:
 
 ```bash
 #!/usr/bin/env bash
@@ -138,7 +138,7 @@ web_extra_exposed_ports:
       https_port: 9999
 ```
 
-These directives tell the ddev router which additional ports to route to the container for the watchers. The web\_environment directive adds the extra HOST and ADMIN\_PORT environment variables required by the admin watcher hot proxy. The PROXY\_URL and STOREFRONT\_SKIP\_SSL\_CERT directives are required by the storefront hot-reload watcher. Note that PROXY\_URL requires the port to be specified explicitly.
+These directives tell the DDEV router which additional ports to route to the container for the watchers. The web\_environment directive adds the extra HOST and ADMIN\_PORT environment variables required by the admin watcher hot proxy. The PROXY\_URL and STOREFRONT\_SKIP\_SSL\_CERT directives are required by the storefront hot-reload watcher. Note that PROXY\_URL requires the port to be specified explicitly.
 
 Note: DISABLE\_ADMIN\_COMPILATION\_TYPECHECK=1 is the default in newer Shopware versions (from about 6.6.7.0). So it's possible to omit it in this case.
 
@@ -148,9 +148,9 @@ Don't forget to restart your project with `ddev restart`.
 
 Start the admin watcher with `bin/watch-administration.sh` (production template) or `composer run watch:admin` (contribution template).
 
-To reach the admin watcher, point your browser to `https://<my-project>.ddev.site:9997` (omit the /admin slug!). You must use your primary ddev url - using localhost or a docker IP address (like 172.19.0.2) will not work.
+To reach the admin watcher, point your browser to `https://<my-project>.ddev.site:9997` (omit the /admin slug!). You must use your primary DDEV url - using localhost or a docker IP address (like 172.19.0.2) will not work.
 
-If you have any custom or third party plugins that supply admin components (like SwagPayPal), you will note, in your browser's console, a number of "mixed content" errors, as the watcher attemps to load plugin assets via http and native IPs. To avoid these errors, you need to configure your browser to allow to show insecure content. If you use the Chrome browser or a similar one, point your browser to `chrome://settings/content/insecureContent` and add your ddev sites `[*.]ddev.site` to the list of allowed sites.
+If you have any custom or third party plugins that supply admin components (like SwagPayPal), you will note, in your browser's console, a number of "mixed content" errors, as the watcher attemps to load plugin assets via http and native IPs. To avoid these errors, you need to configure your browser to allow to show insecure content. If you use the Chrome browser or a similar one, point your browser to `chrome://settings/content/insecureContent` and add your DDEV sites `[*.]ddev.site` to the list of allowed sites.
 
 <div data-full-width="false"><figure><img src="../assets/nbVVQZIHBxv5epTaDg1y.png" alt=""><figcaption><p>Screenshot of Chrome settings to allow insecure content for selected sites</p></figcaption></figure></div>
 

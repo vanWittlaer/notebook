@@ -23,8 +23,8 @@ That one entry covers every project, since they all live under `*.ddev.site`. It
 takes effect immediately; add a custom `project_tld` on its own line if you use
 one.
 
-If you cannot change the router, ddev's
+If you cannot change the router, DDEV's
 [troubleshooting guide](https://docs.ddev.com/en/stable/users/usage/troubleshooting/#dns-rebinding-prohibited-mostly-on-fritzbox-routers)
 lists the alternatives — a public resolver such as `1.1.1.1`, or living with
-ddev's `/etc/hosts` fallback, which is what the recurring sudo prompt on `ddev
+DDEV's `/etc/hosts` fallback, which is what the recurring sudo prompt on `ddev
 start` comes from.

@@ -1,6 +1,6 @@
 # Frontend Work with Claude Code and Playwright
 
-Install the Playwright ddev add-on to your project:
+Install the Playwright DDEV add-on to your project:
 
 ```bash
 ddev add-on get codingsasi/ddev-playwright

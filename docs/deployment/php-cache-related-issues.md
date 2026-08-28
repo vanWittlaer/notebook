@@ -30,7 +30,7 @@ vendor/bin/cachetool opcache:reset --fcgi=/var/run/php-fpm.sock
 
 Note that the value of --fcgi depends on your actual web server setup.
 
-### ddev and other Local Environments
+### DDEV and other Local Environments
 
 In local environments, just make sure that opcache file timestamps are always validated by adding the following directive to your php ini file:
 

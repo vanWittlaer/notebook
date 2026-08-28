@@ -1,6 +1,6 @@
-# phpstan pro with ddev
+# phpstan pro with DDEV
 
-Unfortunately, at this point in time, phpstan pro is not fully compatible with ddev. The following guide thus just describes a workaround, restricted to be used with one ddev project at a time.
+Unfortunately, at this point in time, phpstan pro is not fully compatible with DDEV. The following guide thus just describes a workaround, restricted to be used with one DDEV project at a time.
 
 First, make sure you have composer required phpstan in your project.
 
@@ -18,7 +18,7 @@ services:
       - 127.0.0.1:11111:11111
 ```
 
-Restart ddev. Start phpstan with a command like:
+Restart DDEV. Start phpstan with a command like:
 
 ```bash
 ddev exec vendor/bin/phpstan analyse --pro

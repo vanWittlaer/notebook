@@ -87,7 +87,7 @@ plugins:
         Introduction:
           - index.md
           - introduction/*.md
-        ddev for Shopware:
+        DDEV for Shopware:
           - ddev-for-shopware/*.md
         Hosting:
           - hosting/*.md
@@ -104,19 +104,19 @@ plugins:
 nav:
   - Introduction: index.md
   - How to Get in Touch: introduction/how-to-get-in-touch.md
-  - ddev for Shopware:
+  - DDEV for Shopware:
       - ddev-for-shopware/index.md
-      - Why use ddev for Shopware?: ddev-for-shopware/why-use-ddev.md
-      - Less than 5 Minutes Install with ddev and Symfony Flex: ddev-for-shopware/less-than-5-minutes-install-with-ddev-and-symfony-flex.md
-      - Using shopware-cli with ddev: ddev-for-shopware/using-shopware-cli-with-ddev.md
-      - Storefront and Admin Watchers with ddev: ddev-for-shopware/storefront-and-admin-watchers-with-ddev.md
+      - Why use DDEV for Shopware?: ddev-for-shopware/why-use-ddev.md
+      - Less than 5 Minutes Install with DDEV and Symfony Flex: ddev-for-shopware/less-than-5-minutes-install-with-ddev-and-symfony-flex.md
+      - Using shopware-cli with DDEV: ddev-for-shopware/using-shopware-cli-with-ddev.md
+      - Storefront and Admin Watchers with DDEV: ddev-for-shopware/storefront-and-admin-watchers-with-ddev.md
       - Setting up workers and the scheduler as automated tasks: ddev-for-shopware/message-queue-setup-with-ddev.md
-      - Contribute with ddev: ddev-for-shopware/contribute-with-ddev.md
+      - Contribute with DDEV: ddev-for-shopware/contribute-with-ddev.md
       - Performance Tweaks: ddev-for-shopware/performance-tweaks.md
-      - RabbitMQ with ddev: ddev-for-shopware/rabbitmq-with-ddev.md
-      - phpstan pro with ddev: ddev-for-shopware/phpstan-pro-with-ddev.md
+      - RabbitMQ with DDEV: ddev-for-shopware/rabbitmq-with-ddev.md
+      - phpstan pro with DDEV: ddev-for-shopware/phpstan-pro-with-ddev.md
       - Fetch Media from Production or Staging Server: ddev-for-shopware/fetch-media-from-production-or-staging-server.md
-      - Running Claude Code in ddev: ddev-for-shopware/running-claude-code-in-ddev.md
+      - Running Claude Code in DDEV: ddev-for-shopware/running-claude-code-in-ddev.md
       - Frontend Work with Claude Code and Playwright: ddev-for-shopware/frontend-work-with-claude-code-and-playwright.md
       - DDEV behind Fritz!Box Routers: ddev-for-shopware/ddev-behind-fritzbox-routers.md
   - Hosting:

@@ -1,8 +1,8 @@
-# Using shopware-cli with ddev
+# Using shopware-cli with DDEV
 
 For basic information on shopware-cli see [Shopware docs](https://developer.shopware.com/docs/products/cli/).
 
-To install shopware-cli with your ddev project, run the command below to install the shopware-cli add-on:
+To install shopware-cli with your DDEV project, run the command below to install the shopware-cli add-on:
 
 ```bash
 ddev add-on get vanWittlaer/ddev-shopware-cli

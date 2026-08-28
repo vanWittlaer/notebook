@@ -17,7 +17,7 @@ Make sure you have an APP\_SECRET with sufficient entropy and length. You may wa
 php -r "echo bin2hex(random_bytes(32));"
 ```
 
-Run this command in any environment where you have PHP available (like your ddev web container) and copy the generated string into your .env.local file. Do not commit the app secret to git.
+Run this command in any environment where you have PHP available (like your DDEV web container) and copy the generated string into your .env.local file. Do not commit the app secret to git.
 
 For Shopware versions below 6.6.1.0 you may want to follow the instructions below:
 

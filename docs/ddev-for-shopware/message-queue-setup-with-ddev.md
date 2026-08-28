@@ -1,10 +1,10 @@
 # Setting up workers and the scheduler as automated tasks
 
-At some point it might be desired to mirror your local development or your demo environment as closely as possible to the production environment. When it comes to running Symfony's or Shopware's message queue workers and the scheduler as automated background tasks, this can be achieved easily with ddev.
+At some point it might be desired to mirror your local development or your demo environment as closely as possible to the production environment. When it comes to running Symfony's or Shopware's message queue workers and the scheduler as automated background tasks, this can be achieved easily with DDEV.
 
 ### Supervisor
 
-ddev has supervisord implemented as a control system for running automated tasks. ddev actually uses supervisord itself to schedule internal tasks. So essentially all we need to do is to extend the supervisord worker configuration.
+DDEV has supervisord implemented as a control system for running automated tasks. DDEV actually uses supervisord itself to schedule internal tasks. So essentially all we need to do is to extend the supervisord worker configuration.
 
 ### Defining supervisord Workers
 
@@ -57,7 +57,7 @@ Should you need or want more than one instance of a particular worker, just adju
 
 Note that the `command` directive in the above file does not call the bin/console commands directly. Instead, a self-written shell script `run-worker.sh` is executed. The reason for this is
 
-supervisord with ddev cannot handle processes that kill themselves, such as the `messenger:consume` and `scheduled-task:run` commands when you use the `--time-limit` or `--message-limit` parameters. We need long-running commands for our supervisors, which restart the underlying worker whenever it exits. The solution is a custom script in your project's bin folder `shopware/bin`:
+supervisord with DDEV cannot handle processes that kill themselves, such as the `messenger:consume` and `scheduled-task:run` commands when you use the `--time-limit` or `--message-limit` parameters. We need long-running commands for our supervisors, which restart the underlying worker whenever it exits. The solution is a custom script in your project's bin folder `shopware/bin`:
 
 ```bash
 #!/usr/bin/env bash
@@ -73,14 +73,14 @@ This script just uses an endless loop to feed whatever command you provide as an
 
 ### Activate the Worker Configuration
 
-Finally, to activate your worker configuration with ddev, add a file `Dockerfile.worker` to the folder `.ddev/web-build`
+Finally, to activate your worker configuration with DDEV, add a file `Dockerfile.worker` to the folder `.ddev/web-build`
 
 ```docker
 # .ddev/web-build/Dockerfile.worker
 ADD worker.conf /etc/supervisor/conf.d
 ```
 
-and restart ddev.
+and restart DDEV.
 
 ### Verify Workers are Active
 

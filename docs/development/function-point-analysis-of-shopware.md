@@ -39,7 +39,7 @@ shortcuts make a count of this size feasible in a day instead of weeks:
 
 The division of labour was the interesting part: **Claude (an AI agent) acted
 as the FP counter**, enumerating candidate functions from the Shopware source
-(a checkout of `v6.7.13.0`) and a live ddev installation via the Admin API,
+(a checkout of `v6.7.13.0`) and a live DDEV installation via the Admin API,
 while **I acted as the Anwender** — the user whose view, per the method,
 decides what is business functionality and what is technical machinery. The
 counter asked, I ruled, everything got logged. Fourteen interview questions

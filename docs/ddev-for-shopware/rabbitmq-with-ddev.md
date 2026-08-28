@@ -1,10 +1,10 @@
-# RabbitMQ with ddev
+# RabbitMQ with DDEV
 
 Before using RabbitMQ in a production environment, it may be useful to do a local installation to familiarize yourself with the setup. A local installation also allows for easy debugging in case of runtime problems.
 
-### Setup RabbitMQ with ddev
+### Setup RabbitMQ with DDEV
 
-To setup RabbitMQ in your ddev environment, follow the instructions on <https://github.com/b13/ddev-rabbitmq>. Basically, it comes down to executing the command
+To setup RabbitMQ in your DDEV environment, follow the instructions on <https://github.com/b13/ddev-rabbitmq>. Basically, it comes down to executing the command
 
 ```bash
 ddev get b13/ddev-rabbitmq && ddev restart
@@ -20,7 +20,7 @@ To enable RabbitMQ with Shopware 6 we need to enable the php8.2-amqp extension a
 webimage_extra_packages: [ php8.2-amqp ]
 ```
 
-Restart ddev with `ddev restart` to make this effective.
+Restart DDEV with `ddev restart` to make this effective.
 
 Since its release 6.5, Shopware uses the plain implementation of the Symfony messenger component. Install the Symfony AMQP component, which provides the link between the messenger and RabbitMQ:
 
@@ -44,7 +44,7 @@ The admin user interface for RabbitMQ can be reached on your local machine at:
 
 `https://<your-project>.ddev.site:15673`
 
-The default credentials are rabbitmq/rabbitmq. Refer to the [RabbitMQ documentation](https://www.rabbitmq.com/docs) for further details. The ddev implementation also comes with three easy-to-use commands
+The default credentials are rabbitmq/rabbitmq. Refer to the [RabbitMQ documentation](https://www.rabbitmq.com/docs) for further details. The DDEV implementation also comes with three easy-to-use commands
 
 ```
 ddev rabbitmq
