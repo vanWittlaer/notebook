@@ -12,3 +12,4 @@
 - [Fetch Media from Production or Staging Server](fetch-media-from-production-or-staging-server.md): For local development and testing you do not have to copy all media files to your local environment.
 - [Running Claude Code in ddev](running-claude-code-in-ddev.md): If you do not wish to install Claude Code directly on your computer, this chapter explains how you can easily run it from within your ddev container.
 - [Frontend Work with Claude Code and Playwright](frontend-work-with-claude-code-and-playwright.md): When asking Claude for help with frontend development, it obviously needs some kind of access to the browser frontend. Playwright can provide direct access to browser output for Claude Code.
+- [DDEV behind Fritz!Box Routers](ddev-behind-fritzbox-routers.md): Your project starts, but the browser cannot find `myshop.ddev.site`. The Fritz!Box's DNS rebind protection is swallowing the answer — here is the one-line exception that fixes it.

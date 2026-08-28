@@ -118,6 +118,7 @@ nav:
       - Fetch Media from Production or Staging Server: ddev-for-shopware/fetch-media-from-production-or-staging-server.md
       - Running Claude Code in ddev: ddev-for-shopware/running-claude-code-in-ddev.md
       - Frontend Work with Claude Code and Playwright: ddev-for-shopware/frontend-work-with-claude-code-and-playwright.md
+      - DDEV behind Fritz!Box Routers: ddev-for-shopware/ddev-behind-fritzbox-routers.md
   - Hosting:
       - hosting/index.md
       - How to Trouble-shoot and Evaluate Environment Variables: hosting/how-to-trouble-shoot-and-evaluate-environment-variables.md
