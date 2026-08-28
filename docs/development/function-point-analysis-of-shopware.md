@@ -1,5 +1,19 @@
 # A Function Point Count of Shopware 6.7
 
+??? warning "If you suffer from FPA Derangement Syndrome ;-) skip this!"
+
+    Function Point Analysis was invented by Allan Albrecht at IBM in 1979 and
+    spent the decades that followed as *the* yardstick for "software size" —
+    the reference figure by which larger development departments had their
+    productivity and their estimates judged. The method has its pros and its
+    cons, and both sides of that argument have a point. This article is
+    neither a defence of FPA nor an attempt to reignite the old debate; it
+    simply reports a test case against a modern system that I carried out
+    myself.
+
+    So if you find yourself on the more critical side of the FPA spectrum,
+    you may well want to skip this one.
+
 How big is Shopware, actually? Not in lines of code, not in "it depends" — in a
 unit that was designed to answer exactly this question: **Function Points**
 (IFPUG, ISO 20926). I ran a complete Function Point Analysis of Shopware
