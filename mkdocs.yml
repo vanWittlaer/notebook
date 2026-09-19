@@ -100,6 +100,8 @@ plugins:
           - database.md
         Migration:
           - migration/*.md
+        Trivia and Useless Facts:
+          - trivia/*.md
 
 nav:
   - Introduction: index.md
@@ -141,12 +143,14 @@ nav:
       - How to Discover Available Updates?: development/how-to-discover-available-updates.md
       - Local Testing of Shopware Commercial Features: development/local-testing-of-shopware-commercial-features.md
       - Claude Code: development/claude-code.md
-      - A Function Point Count of Shopware 6.7: development/function-point-analysis-of-shopware.md
   - Administration: administration.md
   - Database: database.md
   - Migration:
       - migration/index.md
       - Side Effects: migration/side-effects.md
+  - Trivia and Useless Facts:
+      - trivia/index.md
+      - A Function Point Count of Shopware 6.7: trivia/function-point-analysis-of-shopware.md
 
 extra:
   social:
